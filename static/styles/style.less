@@ -1,0 +1,172 @@
+@import "_variables.less";
+@import "_mixins.less";
+@import "_header.less";
+@import "_footer.less";
+@import "_button.less";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: @main-family;
+}
+
+// breakpoints phone
+
+@media (@phone) {
+    .body_wrapper {
+        background-image: @backg-blue;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .content {
+        color: antiquewhite;
+        text-align: center;
+        padding-top: 100px;
+        padding: 100px 10px 100px;
+        position: relative;
+    }
+
+    .description_bloc {
+        padding: 20px 0;
+    }
+
+    .sub-desc_bloc {
+        .flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .sub-desc {
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+// breakpoints tablet
+@media (@tablet) {
+    .body_wrapper {
+        background-image: @backg-blue;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        color: antiquewhite;
+        text-align: center;
+        margin-top: 150px;
+        width: 60%;
+        min-width: 768px;
+        padding: 100px 10px 100px;
+        position: relative;
+    }
+
+    .description {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 180px;
+    }
+
+    .description_bloc {
+        .flex;
+        flex-direction: column;
+    }
+
+    .sub-desc {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        img {
+            width: 341px;
+            border-radius: 10px;
+        }
+    }
+
+    .sub-desc_bloc {
+        .flex;
+        flex-direction: column;
+        width: 341px;
+    }
+}
+
+// breakpoints desktop
+
+@media (@desktop) {
+    body {
+        width: 1366px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content {
+        padding-top: 91px;
+        color: @dark;
+    }
+
+    .description {
+        .flex;
+        background-image: @backg-blue;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        padding: 85px 250px 99px 250px;
+
+        .description_bloc-title {
+            margin: 0;
+            font-size: 54px;
+            font-weight: 700;
+            line-height: 63.28px;
+            color: #f6f7ff;
+        }
+
+        .description_bloc-text {
+            margin: 25px 0 29px 0;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23.44px;
+            color: #e0e1ea;
+        }
+    }
+
+    .sub-desc {
+        .flex;
+        background-color: #ffffff;
+        padding: 120px 250px 120px 250px;
+
+        .sub-desc_bloc {
+            width: 379px;
+
+            .sub-desc_bloc-title {
+                font-family: Roboto;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 56px;
+                color: #1f1e25;
+            }
+        }
+    }
+
+    .sub-desc_bloc-text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        color: @dark;
+        margin: 27px 0;
+    }
+}
